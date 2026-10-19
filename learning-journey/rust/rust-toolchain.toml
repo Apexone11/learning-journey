@@ -1,0 +1,5 @@
+# Every Rust project inside this folder uses the same toolchain on both machines.
+# rustup reads this file and installs anything missing automatically.
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy"]

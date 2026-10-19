@@ -1,0 +1,18 @@
+# TypeScript / Node
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Rust
+target/
+
+# Java / IntelliJ
+out/
+*.class
+.idea/
+*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini

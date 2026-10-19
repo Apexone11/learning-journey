@@ -1,0 +1,5 @@
+# Same line endings on every machine, so Git never shows fake "changes"
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
