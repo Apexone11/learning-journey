@@ -8,7 +8,7 @@ public class Employee extends Person {
         this.title = title;
         this.salary = salary;
     }
-    
+
     @Override
     public String describe() {
         return super.describe() + " I work as a " + title + " and my salary is $" + salary + ".";

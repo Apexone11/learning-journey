@@ -7,7 +7,7 @@ public class Dog extends Pet {
         this.needsGrooming = needsGrooming;
     }
 
-    @Override 
+    @Override
     public double visitCost() {
         double cost = super.visitCost();
         if (needsGrooming) {
@@ -16,8 +16,8 @@ public class Dog extends Pet {
         return cost;
     }
 
-    @Override 
-    public String sound(){
+    @Override
+    public String sound() {
         return "Woof!";
     }
 

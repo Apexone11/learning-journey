@@ -1,14 +1,14 @@
 public class Main {
     public static void main(String[] args) {
 
-        int totalVisitCost = 0;
+        double totalVisitCost = 0;
 
         // Create an array of pets with 2 Dogs and 2 Cats
         Pet[] pets = {
-            new Dog("Buddy", 3, true),
-            new Dog("Max", 5, false),
-            new Cat("Whiskers", 2, true),
-            new Cat("Shadow", 4, false)
+                new Dog("Buddy", 3, true),
+                new Dog("Max", 5, false),
+                new Cat("Whiskers", 2, true),
+                new Cat("Shadow", 4, false)
         };
 
         // Loop through each pet and print details

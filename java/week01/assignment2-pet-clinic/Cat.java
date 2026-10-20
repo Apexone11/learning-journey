@@ -1,6 +1,5 @@
 public class Cat extends Pet {
 
-
     private final boolean indoor;
 
     Cat(String name, int ageYears, boolean indoor) {
@@ -8,7 +7,7 @@ public class Cat extends Pet {
         this.indoor = indoor;
     }
 
-    @Override 
+    @Override
     public double visitCost() {
         double cost = super.visitCost();
         if (!indoor) {
