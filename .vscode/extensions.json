@@ -1,5 +1,6 @@
 {
   "recommendations": [
+    "vscjava.vscode-java-pack",
     "rust-lang.rust-analyzer",
     "tamasfe.even-better-toml",
     "editorconfig.editorconfig"

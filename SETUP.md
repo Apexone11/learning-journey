@@ -51,7 +51,7 @@ extensions". Click **Install**. (rust-analyzer and the TOML and EditorConfig hel
 ## 2. First time on a machine
 
 ```powershell
-git clone https://github.com/YOUR_USERNAME/learning-journey.git
+git clone https://github.com/Apexone11/learning-journey.git
 cd learning-journey
 powershell -ExecutionPolicy Bypass -File .\check-setup.ps1
 ```
