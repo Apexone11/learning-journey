@@ -1,8 +1,8 @@
 public class Pet {
 
+    private static int petCount = 0;
     protected String name;
     protected int ageYears;
-    private static int petCount = 0;
 
     Pet(String name, int ageYears) {
         this.name = name;

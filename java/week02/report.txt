@@ -1,0 +1,5 @@
+Aisha,92,A
+Kofi,78,C
+Chloe,85,B
+Yusuf,64,D
+Average: 79.75

@@ -73,8 +73,7 @@ If you can't describe what a method does without the word "and", it is probably 
 
 * A **class** is a **blueprint**. It describes what data (fields) and actions (methods) things
   of that type have.
-* An **object** is **one real thing built from the blueprint**. It is also called an
-  **instance** of the class.
+* An **object** is **one real thing built from the blueprint**. It is also called an **instance** of the class.
 * Every object has **state** (the current values of its fields) and **behavior** (its methods).
 
 ```java
@@ -134,12 +133,12 @@ same name (`this.make = make;`).
 
 ## 3. The four pillars of OOP (APIE)
 
-| Pillar | One line meaning | Java tool |
-|---|---|---|
-| **A**bstraction | Show what something does, hide how | abstract classes, interfaces |
-| **P**olymorphism | One variable, many possible forms | overriding, overloading |
-| **I**nheritance | A new class reuses an existing one | `extends` |
-| **E**ncapsulation | Hide data, control access to it | `private` + getters and setters |
+| Pillar            | One line meaning                   | Java tool                       |
+|-------------------|------------------------------------|---------------------------------|
+| **A**bstraction   | Show what something does, hide how | abstract classes, interfaces    |
+| **P**olymorphism  | One variable, many possible forms  | overriding, overloading         |
+| **I**nheritance   | A new class reuses an existing one | `extends`                       |
+| **E**ncapsulation | Hide data, control access to it    | `private` + getters and setters |
 
 Remember **APIE** ("a pie"). Each one has its own section below.
 
@@ -232,8 +231,8 @@ m.inspect(car);
 
 ### The rules that make it work
 
-* **One `public` class per file**, and the **file name must match** the class name exactly
-  (`Engine` lives in `Engine.java`, case matters).
+* **One `public` class per file**, and the **file name must match** the class name exactly (`Engine` lives in
+  `Engine.java`, case matters).
 * Classes in the **same folder with no package line** can see each other automatically. That
   is how your assignments work.
 * You can only call methods the other class makes visible (`public`, or package access when
@@ -349,12 +348,12 @@ but players exist without the team).
 
 ### "Is a" or "has a"? Test before you use `extends`
 
-| Sentence | Relationship | Use |
-|---|---|---|
-| A Truck **is a** Vehicle | is a | `extends` |
-| A Truck **has an** Engine | has a | a field |
-| A Manager **is an** Employee | is a | `extends` |
-| A Library **has** Books | has a | a field (often a list) |
+| Sentence                     | Relationship | Use                    |
+|------------------------------|--------------|------------------------|
+| A Truck **is a** Vehicle     | is a         | `extends`              |
+| A Truck **has an** Engine    | has a        | a field                |
+| A Manager **is an** Employee | is a         | `extends`              |
+| A Library **has** Books      | has a        | a field (often a list) |
 
 **Rule of thumb:** prefer composition. Only use inheritance when "is a" is truly true.
 
@@ -399,12 +398,12 @@ public class Truck extends Vehicle {
 
 ### What the child gets
 
-| Parent member | Inherited and usable in the child? |
-|---|---|
-| `public` fields and methods | Yes |
-| `protected` fields and methods | Yes |
-| `private` fields and methods | **No direct access.** They exist inside the object, but the child must use the parent's public getters. |
-| Constructors | **Not inherited.** The child calls them with `super(...)`. |
+| Parent member                  | Inherited and usable in the child?                                                                      |
+|--------------------------------|---------------------------------------------------------------------------------------------------------|
+| `public` fields and methods    | Yes                                                                                                     |
+| `protected` fields and methods | Yes                                                                                                     |
+| `private` fields and methods   | **No direct access.** They exist inside the object, but the child must use the parent's public getters. |
+| Constructors                   | **Not inherited.** The child calls them with `super(...)`.                                              |
 
 ---
 
@@ -496,14 +495,14 @@ public String describe() {
 
 People mix these up constantly.
 
-| | **Overloading** | **Overriding** |
-|---|---|---|
-| Where | Same class | Child replaces parent's method |
-| Method name | Same | Same |
-| Parameters | **Different** (number or types) | **Exactly the same** |
-| Return type | Can differ | Same or a subtype |
-| Decided | At **compile time** (static binding) | At **run time** (dynamic binding) |
-| Kind of polymorphism | Compile time | Run time |
+|                      | **Overloading**                      | **Overriding**                    |
+|----------------------|--------------------------------------|-----------------------------------|
+| Where                | Same class                           | Child replaces parent's method    |
+| Method name          | Same                                 | Same                              |
+| Parameters           | **Different** (number or types)      | **Exactly the same**              |
+| Return type          | Can differ                           | Same or a subtype                 |
+| Decided              | At **compile time** (static binding) | At **run time** (dynamic binding) |
+| Kind of polymorphism | Compile time                         | Run time                          |
 
 ```java
 // Overloading: same name, different parameters, both exist side by side
@@ -517,14 +516,13 @@ public void honk(int times) {
 
 Changing **only** the return type is **not** overloading. It is a compile error.
 
-**Memory trick:** over**load** = **load** in more versions. over**ride** = **ride** over the old one.
+**Memory trick:** over **load** = **load** in more versions. over **ride** = **ride** over the old one.
 
 ---
 
 ## 12. Polymorphism and dynamic binding
 
-**Polymorphism** means "many forms." A variable of the **parent type** can point to an object of
-**any child type**.
+**Polymorphism** means "many forms." A variable of the **parent type** can point to an object of **any child type**.
 
 ```java
 public class Animal {
@@ -614,8 +612,7 @@ if (a instanceof Dog d) {
 }
 ```
 
-Casting without checking is dangerous. If `a` is really a `Cow`, `(Dog) a` crashes with a
-**`ClassCastException`**.
+Casting without checking is dangerous. If `a` is really a `Cow`, `(Dog) a` crashes with a **`ClassCastException`**.
 
 ---
 
@@ -682,12 +679,12 @@ public int hashCode() {
 
 ## 15. Access modifiers
 
-| Modifier | Same class | Same package | Subclass (other package) | Everyone |
-|---|:-:|:-:|:-:|:-:|
-| `private` | ✓ | | | |
-| *(none)* "package private" | ✓ | ✓ | | |
-| `protected` | ✓ | ✓ | ✓ | |
-| `public` | ✓ | ✓ | ✓ | ✓ |
+| Modifier                   | Same class | Same package | Subclass (other package) | Everyone |
+|----------------------------|:----------:|:------------:|:------------------------:|:--------:|
+| `private`                  |     ✓     |              |                          |          |
+| *(none)* "package private" |     ✓     |      ✓      |                          |          |
+| `protected`                |     ✓     |      ✓      |            ✓            |          |
+| `public`                   |     ✓     |      ✓      |            ✓            |    ✓    |
 
 * **Fields:** make them `private` by default.
 * **`protected`** lets subclasses use a field directly (`name` instead of `getName()`). Handy,
@@ -700,11 +697,11 @@ public int hashCode() {
 
 ### `final`
 
-| On a... | Meaning |
-|---|---|
-| variable | can't be reassigned (a constant) |
-| method | subclasses **can't override** it |
-| class | nobody can **extend** it (`String` is a final class) |
+| On a...  | Meaning                                              |
+|----------|------------------------------------------------------|
+| variable | can't be reassigned (a constant)                     |
+| method   | subclasses **can't override** it                     |
+| class    | nobody can **extend** it (`String` is a final class) |
 
 ```java
 public static final double TAX_RATE = 0.06;   // a constant, named in ALL_CAPS
@@ -796,12 +793,12 @@ sb.reverse();          // can reverse too
 String result = sb.toString();
 ```
 
-| | `String` | `StringBuilder` | `StringBuffer` |
-|---|---|---|---|
-| Can change? | No | Yes | Yes |
-| Thread safe? | Yes (can't change) | No | Yes |
-| Speed | Slow for repeated edits | **Fastest** | A bit slower |
-| Use when | Normal text | Building text in a loop (most cases) | Many threads share it |
+|              | `String`                | `StringBuilder`                      | `StringBuffer`        |
+|--------------|-------------------------|--------------------------------------|-----------------------|
+| Can change?  | No                      | Yes                                  | Yes                   |
+| Thread safe? | Yes (can't change)      | No                                   | Yes                   |
+| Speed        | Slow for repeated edits | **Fastest**                          | A bit slower          |
+| Use when     | Normal text             | Building text in a loop (most cases) | Many threads share it |
 
 ---
 
@@ -870,68 +867,70 @@ Answer in your head before you code. Answers are below.
 10. You need to build a long String inside a loop of 10,000 steps. What should you use?
 
 **Answers:**
-1. has a.  2. `super();`  3. The declared type `Animal` has no `fetch()`.
+
+1. has a. 2. `super();`  3. The declared type `Animal` has no `fetch()`.
 4. The first pair is overloading (compile time), the second is overriding (run time).
 5. Equal objects must have equal hash codes, or hash based collections break.
-6. Encapsulation.  7. `import java.util.ArrayList;`  8. Yes, same default package.
-9. No, there is no current object.  10. `StringBuilder`.
+6. Encapsulation. 7. `import java.util.ArrayList;`  8. Yes, same default package.
+9. No, there is no current object. 10. `StringBuilder`.
 
 ---
 
 ## 22. Definitions gallery
 
-| Term | Meaning |
-|---|---|
-| **Class** | A blueprint describing fields and methods |
-| **Object / instance** | One real thing created from a class with `new` |
-| **Field** | A variable that belongs to an object (its state) |
-| **Method** | A function that belongs to a class (its behavior) |
-| **Constructor** | Special method that sets up a new object; same name as the class, no return type |
-| **`this`** | The current object |
-| **Encapsulation** | Hiding data with `private` and exposing it through methods |
-| **Getter / setter** | Methods that read / change a private field |
-| **Package** | A named group of classes that matches a folder path |
-| **Import** | Lets you use a class from another package by its short name |
-| **Composition** | "Has a": one object holds another as a field |
-| **Aggregation** | A looser "has a" where the inner object can exist on its own |
-| **Inheritance** | "Is a": a class reuses another class with `extends` |
-| **Superclass / supertype / parent** | The class being extended |
-| **Subclass / subtype / child** | The class doing the extending |
-| **`super(...)`** | Calls the parent constructor; must be the first line |
-| **`super.method()`** | Calls the parent's version of a method |
-| **Constructor chaining** | Parent constructors run before child constructors |
-| **Overriding** | Child replaces a parent method with the same signature |
-| **Overloading** | Same method name, different parameters |
-| **Method signature** | A method's name plus its parameter types |
-| **Polymorphism** | One parent type variable can refer to many child types |
-| **Dynamic (late) binding** | The method version is chosen at run time from the actual object |
-| **Static (early) binding** | The method is chosen at compile time |
-| **Declared type** | The type written on the variable; controls what you can call |
-| **Actual type** | The type of the real object; controls which version runs |
-| **Upcasting** | Child to parent; automatic and safe |
-| **Downcasting** | Parent to child; needs a cast and should be checked with `instanceof` |
-| **`instanceof`** | Checks whether an object is a certain type |
-| **`ClassCastException`** | Crash from casting an object to a type it isn't |
-| **`Object`** | The root superclass of every Java class |
-| **`toString()`** | Returns a text version of an object |
-| **`equals()`** | Compares two objects by content (once overridden) |
-| **`hashCode()`** | Number used by hash collections; must agree with `equals` |
-| **Access modifier** | `private`, package private, `protected`, `public` |
-| **`final`** | Can't be reassigned, overridden, or extended (depends where it is used) |
-| **`static`** | Belongs to the class, shared by all objects |
-| **Abstract class** | Class you can't instantiate; may contain abstract methods |
-| **Abstract method** | Method with no body that subclasses must implement |
-| **Immutable** | Can't change after it is created (like `String`) |
-| **`StringBuilder`** | Fast, changeable string for building text |
-| **Refactoring** | Improving code structure without changing its behavior |
-| **Single Responsibility Principle** | Each class or method should have one job |
+| Term                                | Meaning                                                                          |
+|-------------------------------------|----------------------------------------------------------------------------------|
+| **Class**                           | A blueprint describing fields and methods                                        |
+| **Object / instance**               | One real thing created from a class with `new`                                   |
+| **Field**                           | A variable that belongs to an object (its state)                                 |
+| **Method**                          | A function that belongs to a class (its behavior)                                |
+| **Constructor**                     | Special method that sets up a new object; same name as the class, no return type |
+| **`this`**                          | The current object                                                               |
+| **Encapsulation**                   | Hiding data with `private` and exposing it through methods                       |
+| **Getter / setter**                 | Methods that read / change a private field                                       |
+| **Package**                         | A named group of classes that matches a folder path                              |
+| **Import**                          | Lets you use a class from another package by its short name                      |
+| **Composition**                     | "Has a": one object holds another as a field                                     |
+| **Aggregation**                     | A looser "has a" where the inner object can exist on its own                     |
+| **Inheritance**                     | "Is a": a class reuses another class with `extends`                              |
+| **Superclass / supertype / parent** | The class being extended                                                         |
+| **Subclass / subtype / child**      | The class doing the extending                                                    |
+| **`super(...)`**                    | Calls the parent constructor; must be the first line                             |
+| **`super.method()`**                | Calls the parent's version of a method                                           |
+| **Constructor chaining**            | Parent constructors run before child constructors                                |
+| **Overriding**                      | Child replaces a parent method with the same signature                           |
+| **Overloading**                     | Same method name, different parameters                                           |
+| **Method signature**                | A method's name plus its parameter types                                         |
+| **Polymorphism**                    | One parent type variable can refer to many child types                           |
+| **Dynamic (late) binding**          | The method version is chosen at run time from the actual object                  |
+| **Static (early) binding**          | The method is chosen at compile time                                             |
+| **Declared type**                   | The type written on the variable; controls what you can call                     |
+| **Actual type**                     | The type of the real object; controls which version runs                         |
+| **Upcasting**                       | Child to parent; automatic and safe                                              |
+| **Downcasting**                     | Parent to child; needs a cast and should be checked with `instanceof`            |
+| **`instanceof`**                    | Checks whether an object is a certain type                                       |
+| **`ClassCastException`**            | Crash from casting an object to a type it isn't                                  |
+| **`Object`**                        | The root superclass of every Java class                                          |
+| **`toString()`**                    | Returns a text version of an object                                              |
+| **`equals()`**                      | Compares two objects by content (once overridden)                                |
+| **`hashCode()`**                    | Number used by hash collections; must agree with `equals`                        |
+| **Access modifier**                 | `private`, package private, `protected`, `public`                                |
+| **`final`**                         | Can't be reassigned, overridden, or extended (depends where it is used)          |
+| **`static`**                        | Belongs to the class, shared by all objects                                      |
+| **Abstract class**                  | Class you can't instantiate; may contain abstract methods                        |
+| **Abstract method**                 | Method with no body that subclasses must implement                               |
+| **Immutable**                       | Can't change after it is created (like `String`)                                 |
+| **`StringBuilder`**                 | Fast, changeable string for building text                                        |
+| **Refactoring**                     | Improving code structure without changing its behavior                           |
+| **Single Responsibility Principle** | Each class or method should have one job                                         |
 
 ---
 
 ## 23. Sources
 
 * Professor's Chapter 11 slides: https://shivaprogramming.com/IS247/slides/chap11.html
-* Oracle, OOP concepts (object, class, inheritance, interface, package): https://docs.oracle.com/javase/tutorial/java/concepts/
+* Oracle, OOP concepts (object, class, inheritance, interface,
+  package): https://docs.oracle.com/javase/tutorial/java/concepts/
 * Oracle, Inheritance: https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
 * Oracle, Overriding and hiding methods: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
 * Oracle, Polymorphism: https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html

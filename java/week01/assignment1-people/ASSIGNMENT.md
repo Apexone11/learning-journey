@@ -11,12 +11,12 @@ The starter files already exist with `TODO` comments. You write all the code.
    Override `toString()`.
 3. **Employee.java:** extends `Person`. Adds private `title` (String) and `salary` (double).
    Same idea as Student.
-4. **describe():** add `public String describe()` to `Person` that returns a sentence.
+4. **describe ():** add `public String describe()` to `Person` that returns a sentence.
    Override it in `Student` and `Employee` so each returns its own sentence.
    Example: `Kofi is a Computer Science student with a 3.6 GPA.`
 5. **Main.java:** create 2 Students and 2 Employees, put all 4 in **one** `ArrayList<Person>`,
    loop through it, and print `describe()` for each.
-6. **equals():** override `equals(Object o)` in `Person` so two people with the same name and
+6. **equals ():** override `equals(Object o)` in `Person` so two people with the same name and
    age are equal. In `Main`, test it with one pair that should be equal and one that should not.
    Also override `hashCode()` (one line: `return Objects.hash(name, age);`).
 
@@ -35,6 +35,8 @@ javac *.java
 java Main
 ```
 
-**VS Code Run button:** File > Open Folder > pick `assignment1-people` itself, open `Main.java`, click **Run** above `main`.
+**VS Code Run button:** File > Open Folder > pick `assignment1-people` itself, open `Main.java`, click **Run** above
+`main`.
 
-Stuck on one thing for more than 15 minutes? Check `Java Ch 11 OOP Inheritance and Polymorphism.md` one folder up, then ask Claude.
+Stuck on one thing for more than 15 minutes? Check `Java Ch 11 OOP Inheritance and Polymorphism.md` one folder up, then
+ask Claude.
